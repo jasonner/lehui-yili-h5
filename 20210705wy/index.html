@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>争先锋致敬英雄  勇担当铸就伟业</title>
+    <link rel="stylesheet" href="./css/common.css?v=10">
+    <link rel="stylesheet" href="./css/index.css?v=10">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script src="./js/api.js?v=2"></script>
+    <script src="./js/reg.js?v=2"></script>
+    <script src="./js/jquery.js?v=2"></script>
+    <script src="./js/papaparse.js?v=2"></script>
+    <script src="./js/Forward.js?v=2"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/music.js?v=2"></script>
+    <script defer src="./js/utils.js?v=12"></script>
+    <script defer src="./js/index.js?v=13"></script>
+</head>
+
+<body>
+    <div class="content-mobile">
+        <input id="datepicker" style="display: none;" type="datetime-local" type="text">
+         <!-- <div class="swiper-container"> -->
+        <div class="swiper-container swiper-no-swiping" id="app">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p1">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <div class="wel-com">
+                        <!-- <img class="submit-btn next" src="./icon/next.png" alt=""> -->
+                        <img src="./img/welcome-bt.png" alt="">
+                    </div>
+
+                    <img class="point-go" src="./icon/click_hand2.png" alt="">
+                </div>
+                <div class="swiper-slide p2">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <img class="re-btn" src="./icon/re-icon.png" alt="">
+                    <div class="form">
+                        <h3 class="form-title">请填写您的个人信息</h3>
+                        <div class="form-item">
+                            <input type="text" name="username" placeholder="姓名">
+                            <!-- <select name="gender">
+                                <option value="" selected disabled>性别</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select> -->
+                        </div>
+                        <div class="form-item">
+                            <input type="number" maxlength="11" name="mobile" pattern="[0-9]*" placeholder="电话">
+                            <!-- <input type="number" name="mobile" placeholder="电话"> -->
+                        </div>
+                        <!-- <div class="form-item">
+                            <input name="idcode" placeholder="身份证号">
+                        </div> -->
+                        <div class="form-item">
+                            <select id="personType" name="department">
+                                <option value="" selected disabled>所属部门</option>
+                            </select>
+                        </div>
+
+                        <img data-http="setUserInfo" class="submit-btn  submit-btn-getUser" src="./icon/next.png" alt="">
+
+                    </div>
+                    <div class="footer">
+                        <p>*以上信息请于7月15日之前填写并上传</p>
+                    </div>
+                </div>
+                <div class="swiper-slide p3">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <img class="re-btn" src="./icon/re-icon.png" alt="">
+                    <div class="form">
+                        <div class="left select-img" id="healthcodeurl">
+                            <img class="template" src="./img/selectimg-bg.png" alt="">
+                            <!-- <img class="content" src="./img/LOGO.png" alt=""> -->
+                            <span class="info">请上传您的<br />疫苗接种证明</span>
+                        </div>
+                        <div class="right select-img" id="vaccinesurl">
+                            <img class="template" src="./img/selectimg-bg.png" alt="">
+                            <!-- <img class="content" src="./img/test.jpg" alt=""> -->
+                            <span class="info">请上传您的<br />核酸检测证明</span>
+                        </div>
+                    </div>
+                    <img data-http="setUserCode" class="img-submit-btn" src="./icon/next.png" alt="">
+                    <div class="footer">
+                        <p>*为了响应当地疫情防控要求，参见会人员需在会议前上传您的疫苗接种证明或7日内核酸检测证明。</p>
+                        <p>*核酸检测证明有效期7月12日-15日内。</p>
+                        <p>*以上信息请于7月15日之前填写并上传。</p>
+                    </div>
+                </div>
+
+                <!-- 上传行程单 -->
+                <div class="swiper-slide p4">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <img class="re-btn" src="./icon/re-icon.png" alt="">
+                    <div class="form">
+                        <h3 class="form-title select-img travel" id="itinerarycardurl"><img src="./img/Upload-itinerary.png" alt=""></h3>
+                        <img data-http="setUserCode" class="submit-btn-trval" src="./icon/next.png" alt="">
+                    </div>
+                    <div class="footer">
+                        <p>*为了响应当地疫情防控要求，各参会人员需在会议前上传最新通信大数据行程卡截图。</p>
+                        <p>*以上信息请于7月15日之前填写并上传。</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide p5">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <img class="re-btn" src="./icon/re-icon.png" alt="">
+                    <div class="form">
+                        <h3 class="form-title"><img src="./img/cfxxcj.png" alt=""></h3>
+                        <div class="form-item">
+                            <h5 class="form-item-title">出发城市</h5>
+                            <div class="form-input">
+                                <input type="text" id="g_city" name="g_city" placeholder="请输入">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h5 class="form-item-title">请选择您的交通方式</h5>
+                            <div class="form-input">
+                                <select id="g_travelmode" type="text" name="g_travelmode">
+                                    <option value="" selected disabled>请选择</option>
+                                    <option value="飞机">飞机</option>
+                                    <option value="火车">火车</option>
+                                    <option value="自驾">自驾</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h5 class="form-item-title">请填写您的行程信息</h5>
+                            <div class="form-input">
+                                <input type="text" id="g_travelinfo" name="g_travelinfo" placeholder="例：CA1469">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h5 class="form-item-title">请选择您的到达时间</h5>
+                            <div class="form-input">
+                                <input date type="datetime-local" id="g_arrivaltime" name="g_arrivaltime" placeholder="请选择时间">
+                            </div>
+                        </div>
+                        <img data-http="setUserCFInfo" class="submit-btn g_time" src="./icon/next.png" alt="">
+                    </div>
+                    <div class="footer">
+                        <p>*以上信息请于7月15日之前填写并上传</p>
+                    </div>
+                </div>
+                <div class="swiper-slide p6">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <img class="re-btn" src="./icon/re-icon.png" alt="">
+                    <div class="form">
+                        <h3 class="form-title"><img src="./img/fcxxcj.png" alt=""></h3>
+                        <div class="form-item">
+                            <h5 class="form-item-title">到达城市</h5>
+                            <div class="form-input">
+                                <input type="text" id="c_city" name="c_city" placeholder="请输入">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h5 class="form-item-title">请选择您的交通方式</h5>
+                            <div class="form-input">
+                                <select type="text" id="c_travelmode" name="c_travelmode">
+                                    <option value="" selected disabled>请选择</option>
+                                    <option value="飞机">飞机</option>
+                                    <option value="火车">火车</option>
+                                    <option value="自驾">自驾</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h5 class="form-item-title">请填写您的行程信息</h5>
+                            <div class="form-input">
+                                <input type="text" id="c_travelinfo" name="c_travelinfo" placeholder="例：CA1469">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <h5 class="form-item-title">请选择您从酒店出发时间</h5>
+                            <div class="form-input">
+                                <input date type="datetime-local" id="c_arrivaltime" name="c_arrivaltime" placeholder="请选择时间">
+                            </div>
+                        </div>
+                        <img data-http="setUserHCInfo" data-end="true" class="submit-btn c_time" src="./icon/submit.png" alt="">
+                    </div>
+                    <div class="footer">
+                        <p>*以上信息请于7月15日之前填写并上传</p>
+                    </div>
+                </div>
+                <!-- 二维码 -->
+                <div class="swiper-slide p7">
+                    <div id="logo">
+                        <img src="./img/LOGO.png" alt="">
+                    </div>
+                    <div class="title">
+                        <img src="./img/title.png" alt="">
+                    </div>
+                    <img data-page="1" class="re-btn" src="./icon/re-icon.png" alt="">
+                    <div class="content-box">
+                        <h3 class="qr-title"><img src="./img/dzchz.png" alt=""></h3>
+                        <h3 class="qr-user-info">代用名</h3>
+                        <h3 class="qr-usertype-info">参会嘉宾</h3>
+                        <div class="qr-code">
+                            <div class="qr-code-img"></div>
+                            <p>长按保存图片</p>
+                            <p>此凭证需要在报到当天出示并换取纸质参会证</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-pc">
+        <img src="../20210705wy/img/PC-qcode.jpg" alt="" srcset="">
+        <div>请使用手机微信扫描上方二维码操作</div>
+    </div>
+    
+</body>
+
+</html>
