@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10vw;
+}
+
+body {
+    position: relative;
+    font-size: 14px;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/background.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
+}
+
+input,
+select {
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    min-width: 2.56rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0.1rem .233333rem;
+    border: 2px solid #dde4ef;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-unselect {
+    color: #898989;
+}
+
+input::placeholder {
+    color: #898989;
+}
+
+/* 动画 */
+@keyframes xz {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.submit-btn,.submit-btn-trval {
+    width: 3.5rem;
+    margin-top: 20px;
+}
+
+
+.img-submit-btn {
+    width: 3.5rem;
+    margin-top: 20px;
+}
+
+.re-btn {
+    position: absolute;
+    width: 1.3rem;
+    bottom: 1%;
+    right: 1%;
+    z-index: 9999;
+}
+
+
+@keyframes hx {
+    /* 0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+
+    } */
+
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale3d(0.8, 0.8, 0.8);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
